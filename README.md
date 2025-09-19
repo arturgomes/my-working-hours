@@ -1,69 +1,97 @@
-# React + TypeScript + Vite
+# Work Hours Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for calculating and managing work schedules across different time zones. This tool helps users define their working hours and visualize availability in their manager's time zone, making remote work coordination easier.
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This application allows users to:
+- Define their weekly work schedule with flexible start and end times
+- Search and select their manager's city/timezone
+- View real-time clocks for both local time and manager's time
+- See an availability summary showing overlap between work schedules
+- Switch between multiple languages
+- Toggle between light and dark themes
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Core Framework
+- **React 19** - UI library with latest features
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and development server
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### State Management
+- **Redux Toolkit** - Predictable state management
+- **React Redux** - React bindings for Redux
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### UI & Styling
+- **Tailwind CSS v4** - Utility-first CSS framework
+- **Ark UI** - Headless component library
+- **clsx** - Conditional class name utility
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Forms & Validation
+- **React Hook Form** - Performant form library
+- **Zod** - Schema validation
+- **@hookform/resolvers** - Form validation resolvers
+
+### Internationalization
+- **i18next** - Internationalization framework
+- **react-i18next** - React integration for i18next
+- **i18next-browser-languagedetector** - Automatic language detection
+- **i18next-http-backend** - HTTP backend for loading translations
+
+### Development Tools
+- **ESLint** - Code linting
+- **TypeScript ESLint** - TypeScript-specific linting rules
+- **Vite React Plugin** - React support for Vite
+
+## Getting Started
+
+### Prerequisites
+- Node.js (latest LTS recommended)
+- npm or yarn
+
+### Installation
+```bash
+# Clone the repository
+git clone <repository-url>
+cd my-working-hours
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Available Scripts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Work Schedule Management
+- Define work hours for each day of the week
+- Flexible time input with validation
+- Real-time schedule updates
+
+### Time Zone Support
+- City search with timezone detection
+- Real-time clock displays
+- Automatic time conversion
+
+### Internationalization
+- Multi-language support
+- Automatic language detection
+- Easy language switching
+
+### Theme Support
+- Light and dark mode
+- Smooth theme transitions
+- System preference detection
+
+### Responsive Design
+- Mobile-first approach
+- Adaptive layouts
+- Touch-friendly interface

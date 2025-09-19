@@ -1,9 +1,7 @@
-import { useTranslation } from "react-i18next";
 import { useTheme } from "../contexts/ThemeContext";
 
 export const ThemeToggle = () => {
 	const { theme, toggleTheme } = useTheme();
-	const { t } = useTranslation();
 	const handleToggle = () => {
 		toggleTheme();
 	};
@@ -15,9 +13,6 @@ export const ThemeToggle = () => {
 			className="p-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
 			aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
 		>
-			<title className="sr-only">
-				{t("theme.switchTo", { mode: theme === "light" ? "dark" : "light" })}
-			</title>
 			{theme === "light" ? (
 				<svg
 					aria-hidden="true"

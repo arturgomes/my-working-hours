@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store";
 import { AvailabilitySummary } from "./AvailabilitySummary";
-import { CitySearchSimple } from "./CitySearchSimple";
+import { CitySearchRTK } from "./CitySearchRTK";
 import { TimeDisplay } from "./TimeDisplay";
 import { WorkHoursForm } from "./WorkHoursForm";
 
@@ -13,12 +13,12 @@ export function Main() {
 	);
 
 	return (
-		<main className="max-w-4xl mx-auto px-6 py-8">
+		<main className="flex-grow max-w-4xl mx-auto px-6 py-8">
 			<div className="space-y-6">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 					<div className="flex flex-col gap-6">
 						<WorkHoursForm className="h-auto" />
-						<CitySearchSimple
+						<CitySearchRTK
 							placeholder={t("citySearch.managerPlaceholder")}
 							className="h-auto"
 						/>

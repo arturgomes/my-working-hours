@@ -40,6 +40,13 @@ export const CitySearchRTK = ({
 		return searchQuery;
 	}, [selectedCity, searchQuery]);
 
+	const collection = useMemo(() => {
+		return createListCollection({
+			items: suggestions,
+			itemToString: (item: CitySearchResult) => item.display_name,
+		});
+	}, [suggestions]);
+
 	const handleCitySelect = (city: CitySearchResult) => {
 		setSearchQuery(city.display_name);
 		setIsOpen(false);
@@ -57,6 +64,7 @@ export const CitySearchRTK = ({
 	return (
 		<div className={`w-full ${className}`}>
 			<Combobox.Root
+				collection={collection}
 				open={isOpen}
 				onOpenChange={({ open }) => setIsOpen(open)}
 				onValueChange={({ value }) => {
