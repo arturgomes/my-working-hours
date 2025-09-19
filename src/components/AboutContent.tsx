@@ -5,10 +5,17 @@ export const AboutContent = () => {
 
 	return (
 		<div className="space-y-4">
-			<p className="text-base leading-relaxed">
-				{t("about.description")}
+			<p className="text-base leading-relaxed">{t("about.description")}</p>
+			<p>
+				URL:{" "}
+				<a
+					href="https://github.com/arturgomes/my-working-hours.git"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					https://github.com/arturgomes/my-working-hours.git
+				</a>
 			</p>
-
 			<div>
 				<h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
 					{t("about.features")}
