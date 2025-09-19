@@ -1,0 +1,71 @@
+{
+	"header": {
+		"title": "Calcolatore Ore di Lavoro",
+		"subtitle": "Calcola la tua disponibilità attraverso i fusi orari"
+	},
+	"footer": {
+		"builtWith": "Realizzato con React 19, RTK Query e Ark UI"
+	},
+	"theme": {
+		"switchToDark": "Passa alla modalità scura",
+		"switchToLight": "Passa alla modalità chiara",
+		"toggleAriaLabel": "Passa alla modalità {mode}"
+	},
+	"workSchedule": {
+		"title": "Il Tuo Orario di Lavoro",
+		"startTimeLabel": "Ora di Inizio",
+		"endTimeLabel": "Ora di Fine",
+		"autoSaveNote": "Le modifiche vengono salvate automaticamente",
+		"overnightSupportNote": "Gli orari notturni sono supportati (es. 22:00 - 06:00)"
+	},
+	"citySearch": {
+		"title": "Cerca la Posizione del Manager",
+		"label": "Cerca la Posizione del Manager",
+		"placeholder": "Cerca una città...",
+		"managerPlaceholder": "Cerca la città del tuo manager...",
+		"noResultsFound": "Nessuna città trovata per \"{{query}}\"",
+		"startTyping": "Inizia a digitare per cercare città...",
+		"searching": "Ricerca in corso...",
+		"selectedLabel": "Selezionato:",
+		"showingCitiesCount": "Mostrando {{count}} grandi città nel mondo",
+		"offlineMode": {
+			"title": "Utilizzando dati offline",
+			"description": "API non disponibile, mostrando città comuni"
+		}
+	},
+	"availability": {
+		"title": "Riepilogo Disponibilità",
+		"selectLocationPrompt": "Seleziona la posizione del tuo manager per vedere il confronto di disponibilità.",
+		"available": "Disponibile",
+		"unavailable": "Non disponibile",
+		"nextAvailable": "Prossima disponibilità: {{time}}",
+		"yourTime": "Il Tuo Orario",
+		"managerTime": "Orario del Manager",
+		"workHours": "Ore di lavoro: {{startTime}} - {{endTime}}",
+		"yourHoursThere": "I tuoi orari là: {{startTime}} - {{endTime}}",
+		"quickCommunication": {
+			"title": "Comunicazione Rapida",
+			"messagePrefix": "Sono disponibile dalle",
+			"messageSuffix": "del tuo orario."
+		}
+	},
+	"timeDisplay": {
+		"yourLocalTime": "Il Tuo Orario Locale",
+		"cityTime": "Orario di {{city}}"
+	},
+	"validation": {
+		"invalidTimeFormat": "Inserisci un orario valido nel formato HH:MM",
+		"invalidTime": "Inserisci un orario valido",
+		"endTimeDifferent": "L'ora di fine deve essere diversa dall'ora di inizio"
+	},
+	"common": {
+		"search": "Cerca",
+		"loading": "Caricamento...",
+		"error": "Errore",
+		"noData": "Nessun dato disponibile"
+	},
+	"accessibility": {
+		"searchIcon": "Cerca",
+		"loadingSpinner": "Caricamento"
+	}
+}

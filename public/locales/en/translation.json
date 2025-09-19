@@ -1,0 +1,71 @@
+{
+	"header": {
+		"title": "Work Hours Calculator",
+		"subtitle": "Calculate your availability across timezones"
+	},
+	"footer": {
+		"builtWith": "Built with React 19, RTK Query, and Ark UI"
+	},
+	"theme": {
+		"switchToDark": "Switch to dark mode",
+		"switchToLight": "Switch to light mode",
+		"toggleAriaLabel": "Switch to {mode} mode"
+	},
+	"workSchedule": {
+		"title": "Your Work Schedule",
+		"startTimeLabel": "Start Time",
+		"endTimeLabel": "End Time",
+		"autoSaveNote": "Changes are automatically saved",
+		"overnightSupportNote": "Overnight schedules are supported (e.g., 22:00 - 06:00)"
+	},
+	"citySearch": {
+		"title": "Search Manager's Location",
+		"label": "Search Manager's Location",
+		"placeholder": "Search for a city...",
+		"managerPlaceholder": "Search for your manager's city...",
+		"noResultsFound": "No cities found for \"{{query}}\"",
+		"startTyping": "Start typing to search cities...",
+		"searching": "Searching...",
+		"selectedLabel": "Selected:",
+		"showingCitiesCount": "Showing {{count}} major cities worldwide",
+		"offlineMode": {
+			"title": "Using offline data",
+			"description": "API unavailable, showing common cities"
+		}
+	},
+	"availability": {
+		"title": "Availability Summary",
+		"selectLocationPrompt": "Please select your manager's location to see availability comparison.",
+		"available": "Available",
+		"unavailable": "Unavailable",
+		"nextAvailable": "Next available: {{time}}",
+		"yourTime": "Your Time",
+		"managerTime": "Manager's Time",
+		"workHours": "Work hours: {{startTime}} - {{endTime}}",
+		"yourHoursThere": "Your hours there: {{startTime}} - {{endTime}}",
+		"quickCommunication": {
+			"title": "Quick Communication",
+			"messagePrefix": "I'm available from",
+			"messageSuffix": "your time."
+		}
+	},
+	"timeDisplay": {
+		"yourLocalTime": "Your Local Time",
+		"cityTime": "{{city}} Time"
+	},
+	"validation": {
+		"invalidTimeFormat": "Please enter a valid time in HH:MM format",
+		"invalidTime": "Please enter a valid time",
+		"endTimeDifferent": "End time must be different from start time"
+	},
+	"common": {
+		"search": "Search",
+		"loading": "Loading...",
+		"error": "Error",
+		"noData": "No data available"
+	},
+	"accessibility": {
+		"searchIcon": "Search",
+		"loadingSpinner": "Loading"
+	}
+}

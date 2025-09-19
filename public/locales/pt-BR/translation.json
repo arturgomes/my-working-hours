@@ -1,0 +1,71 @@
+{
+	"header": {
+		"title": "Calculadora de Horário de Trabalho",
+		"subtitle": "Calcule sua disponibilidade entre fusos horários"
+	},
+	"footer": {
+		"builtWith": "Desenvolvido com React 19, RTK Query e Ark UI"
+	},
+	"theme": {
+		"switchToDark": "Alternar para modo escuro",
+		"switchToLight": "Alternar para modo claro",
+		"toggleAriaLabel": "Alternar para modo {mode}"
+	},
+	"workSchedule": {
+		"title": "Seu Horário de Trabalho",
+		"startTimeLabel": "Horário de Início",
+		"endTimeLabel": "Horário de Término",
+		"autoSaveNote": "As alterações são salvas automaticamente",
+		"overnightSupportNote": "Horários noturnos são suportados (ex: 22:00 - 06:00)"
+	},
+	"citySearch": {
+		"title": "Buscar Localização do Gestor",
+		"label": "Buscar Localização do Gestor",
+		"placeholder": "Busque por uma cidade...",
+		"managerPlaceholder": "Busque pela cidade do seu gestor...",
+		"noResultsFound": "Nenhuma cidade encontrada para \"{{query}}\"",
+		"startTyping": "Comece a digitar para buscar cidades...",
+		"searching": "Buscando...",
+		"selectedLabel": "Selecionado:",
+		"showingCitiesCount": "Mostrando {{count}} principais cidades mundiais",
+		"offlineMode": {
+			"title": "Usando dados offline",
+			"description": "API indisponível, mostrando cidades comuns"
+		}
+	},
+	"availability": {
+		"title": "Resumo de Disponibilidade",
+		"selectLocationPrompt": "Por favor, selecione a localização do seu gestor para ver a comparação de disponibilidade.",
+		"available": "Disponível",
+		"unavailable": "Indisponível",
+		"nextAvailable": "Próxima disponibilidade: {time}",
+		"yourTime": "Seu Horário",
+		"managerTime": "Horário do Gestor",
+		"workHours": "Horário de trabalho: {startTime} - {endTime}",
+		"yourHoursThere": "Seu horário lá: {startTime} - {endTime}",
+		"quickCommunication": {
+			"title": "Comunicação Rápida",
+			"messagePrefix": "Estou disponível das",
+			"messageSuffix": "no seu horário."
+		}
+	},
+	"timeDisplay": {
+		"yourLocalTime": "Seu Horário Local",
+		"cityTime": "Horário de {city}"
+	},
+	"validation": {
+		"invalidTimeFormat": "Por favor, insira um horário válido no formato HH:MM",
+		"invalidTime": "Por favor, insira um horário válido",
+		"endTimeDifferent": "O horário de término deve ser diferente do horário de início"
+	},
+	"common": {
+		"search": "Buscar",
+		"loading": "Carregando...",
+		"error": "Erro",
+		"noData": "Nenhum dado disponível"
+	},
+	"accessibility": {
+		"searchIcon": "Buscar",
+		"loadingSpinner": "Carregando"
+	}
+}

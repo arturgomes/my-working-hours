@@ -8,10 +8,9 @@ i18n
 	.use(LanguageDetector)
 	.use(initReactI18next)
 	.init({
-		lng: "pt-BR",
-		fallbackLng: "pt-BR",
-		debug: true,
-		supportedLngs: ["en", "pt-BR", "de", "es", "fr"],
+		lng: "en",
+		fallbackLng: "en",
+		debug: false,
 
 		interpolation: {
 			escapeValue: false,

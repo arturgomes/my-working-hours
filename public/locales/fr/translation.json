@@ -1,0 +1,71 @@
+{
+	"header": {
+		"title": "Calculateur d'Heures de Travail",
+		"subtitle": "Calculez votre disponibilité à travers les fuseaux horaires"
+	},
+	"footer": {
+		"builtWith": "Construit avec React 19, RTK Query, et Ark UI"
+	},
+	"theme": {
+		"switchToDark": "Passer en mode sombre",
+		"switchToLight": "Passer en mode clair",
+		"toggleAriaLabel": "Passer en mode {mode}"
+	},
+	"workSchedule": {
+		"title": "Votre Horaire de Travail",
+		"startTimeLabel": "Heure de Début",
+		"endTimeLabel": "Heure de Fin",
+		"autoSaveNote": "Les modifications sont automatiquement sauvegardées",
+		"overnightSupportNote": "Les horaires de nuit sont pris en charge (ex: 22:00 - 06:00)"
+	},
+	"citySearch": {
+		"title": "Rechercher la Localisation du Manager",
+		"label": "Rechercher la Localisation du Manager",
+		"placeholder": "Rechercher une ville...",
+		"managerPlaceholder": "Rechercher la ville de votre manager...",
+		"noResultsFound": "Aucune ville trouvée pour \"{{query}}\"",
+		"startTyping": "Commencez à taper pour rechercher des villes...",
+		"searching": "Recherche en cours...",
+		"selectedLabel": "Sélectionné:",
+		"showingCitiesCount": "Affichage de {{count}} grandes villes dans le monde",
+		"offlineMode": {
+			"title": "Utilisation des données hors ligne",
+			"description": "API indisponible, affichage des villes communes"
+		}
+	},
+	"availability": {
+		"title": "Résumé de Disponibilité",
+		"selectLocationPrompt": "Veuillez sélectionner la localisation de votre manager pour voir la comparaison de disponibilité.",
+		"available": "Disponible",
+		"unavailable": "Indisponible",
+		"nextAvailable": "Prochaine disponibilité: {{time}}",
+		"yourTime": "Votre Heure",
+		"managerTime": "Heure du Manager",
+		"workHours": "Heures de travail: {{startTime}} - {{endTime}}",
+		"yourHoursThere": "Vos heures là-bas: {{startTime}} - {{endTime}}",
+		"quickCommunication": {
+			"title": "Communication Rapide",
+			"messagePrefix": "Je suis disponible de",
+			"messageSuffix": "à votre heure."
+		}
+	},
+	"timeDisplay": {
+		"yourLocalTime": "Votre Heure Locale",
+		"cityTime": "Heure de {{city}}"
+	},
+	"validation": {
+		"invalidTimeFormat": "Veuillez entrer une heure valide au format HH:MM",
+		"invalidTime": "Veuillez entrer une heure valide",
+		"endTimeDifferent": "L'heure de fin doit être différente de l'heure de début"
+	},
+	"common": {
+		"search": "Rechercher",
+		"loading": "Chargement...",
+		"error": "Erreur",
+		"noData": "Aucune donnée disponible"
+	},
+	"accessibility": {
+		"searchIcon": "Rechercher",
+		"loadingSpinner": "Chargement"
+	}
+}

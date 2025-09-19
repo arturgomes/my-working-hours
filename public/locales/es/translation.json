@@ -1,0 +1,71 @@
+{
+	"header": {
+		"title": "Calculadora de Horarios de Trabajo",
+		"subtitle": "Calcula tu disponibilidad entre zonas horarias"
+	},
+	"footer": {
+		"builtWith": "Desarrollado con React 19, RTK Query y Ark UI"
+	},
+	"theme": {
+		"switchToDark": "Cambiar a modo oscuro",
+		"switchToLight": "Cambiar a modo claro",
+		"toggleAriaLabel": "Cambiar a modo {mode}"
+	},
+	"workSchedule": {
+		"title": "Tu Horario de Trabajo",
+		"startTimeLabel": "Hora de Inicio",
+		"endTimeLabel": "Hora de Fin",
+		"autoSaveNote": "Los cambios se guardan automáticamente",
+		"overnightSupportNote": "Se admiten horarios nocturnos (ej: 22:00 - 06:00)"
+	},
+	"citySearch": {
+		"title": "Buscar Ubicación del Gerente",
+		"label": "Buscar Ubicación del Gerente",
+		"placeholder": "Buscar una ciudad...",
+		"managerPlaceholder": "Buscar la ciudad de tu gerente...",
+		"noResultsFound": "No se encontraron ciudades para \"{{query}}\"",
+		"startTyping": "Comienza a escribir para buscar ciudades...",
+		"searching": "Buscando...",
+		"selectedLabel": "Seleccionado:",
+		"showingCitiesCount": "Mostrando {{count}} ciudades principales del mundo",
+		"offlineMode": {
+			"title": "Usando datos sin conexión",
+			"description": "API no disponible, mostrando ciudades comunes"
+		}
+	},
+	"availability": {
+		"title": "Resumen de Disponibilidad",
+		"selectLocationPrompt": "Por favor, selecciona la ubicación de tu gerente para ver la comparación de disponibilidad.",
+		"available": "Disponible",
+		"unavailable": "No disponible",
+		"nextAvailable": "Próxima disponibilidad: {time}",
+		"yourTime": "Tu Horario",
+		"managerTime": "Horario del Gerente",
+		"workHours": "Horario de trabajo: {startTime} - {endTime}",
+		"yourHoursThere": "Tu horario allí: {startTime} - {endTime}",
+		"quickCommunication": {
+			"title": "Comunicación Rápida",
+			"messagePrefix": "Estoy disponible desde",
+			"messageSuffix": "tu horario."
+		}
+	},
+	"timeDisplay": {
+		"yourLocalTime": "Tu Hora Local",
+		"cityTime": "Hora de {{city}}"
+	},
+	"validation": {
+		"invalidTimeFormat": "Por favor, ingresa una hora válida en formato HH:MM",
+		"invalidTime": "Por favor, ingresa una hora válida",
+		"endTimeDifferent": "La hora de fin debe ser diferente a la hora de inicio"
+	},
+	"common": {
+		"search": "Buscar",
+		"loading": "Cargando...",
+		"error": "Error",
+		"noData": "No hay datos disponibles"
+	},
+	"accessibility": {
+		"searchIcon": "Buscar",
+		"loadingSpinner": "Cargando"
+	}
+}
