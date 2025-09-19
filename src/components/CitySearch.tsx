@@ -80,6 +80,7 @@ export const CitySearch = ({
 							stroke="currentColor"
 							viewBox="0 0 24 24"
 						>
+							<title>Search</title>
 							<path
 								strokeLinecap="round"
 								strokeLinejoin="round"
