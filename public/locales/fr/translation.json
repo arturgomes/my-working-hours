@@ -4,7 +4,8 @@
 		"subtitle": "Calculez votre disponibilité à travers les fuseaux horaires"
 	},
 	"footer": {
-		"builtWith": "Construit avec React 19, RTK Query, et Ark UI"
+		"builtWith": "Construit avec React 19, RTK Query, et Ark UI",
+		"aboutApp": "À propos de cette application"
 	},
 	"theme": {
 		"switchToDark": "Passer en mode sombre",
@@ -31,7 +32,8 @@
 		"offlineMode": {
 			"title": "Utilisation des données hors ligne",
 			"description": "API indisponible, affichage des villes communes"
-		}
+		},
+		"clearSelectedCity": "Supprimer la ville sélectionnée"
 	},
 	"availability": {
 		"title": "Résumé de Disponibilité",
@@ -62,10 +64,22 @@
 		"search": "Rechercher",
 		"loading": "Chargement...",
 		"error": "Erreur",
-		"noData": "Aucune donnée disponible"
+		"noData": "Aucune donnée disponible",
+		"close": "Fermer"
 	},
 	"accessibility": {
 		"searchIcon": "Rechercher",
 		"loadingSpinner": "Chargement"
+	},
+	"about": {
+		"title": "À propos du Calculateur d'Heures de Travail",
+		"description": "Une application web moderne pour calculer et gérer les horaires de travail à travers différents fuseaux horaires. Cet outil aide les utilisateurs à définir leurs heures de travail et à visualiser la disponibilité dans le fuseau horaire de leur manager, facilitant la coordination du travail à distance.",
+		"features": "Fonctionnalités Principales",
+		"feature1": "Définir un horaire de travail hebdomadaire avec des heures de début et de fin flexibles",
+		"feature2": "Rechercher et sélectionner la ville/fuseau horaire du manager avec des horloges en temps réel",
+		"feature3": "Voir un résumé de disponibilité montrant le chevauchement entre les horaires de travail",
+		"feature4": "Support multi-langues avec détection automatique de la langue",
+		"feature5": "Mode clair et sombre avec design responsive, mobile-first",
+		"techStack": "Stack Technologique"
 	}
 }

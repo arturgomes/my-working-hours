@@ -4,7 +4,8 @@
 		"subtitle": "Berechnen Sie Ihre Verfügbarkeit über Zeitzonen hinweg"
 	},
 	"footer": {
-		"builtWith": "Erstellt mit React 19, RTK Query und Ark UI"
+		"builtWith": "Erstellt mit React 19, RTK Query und Ark UI",
+		"aboutApp": "Über diese App"
 	},
 	"theme": {
 		"switchToDark": "Zum dunklen Modus wechseln",
@@ -31,7 +32,8 @@
 		"offlineMode": {
 			"title": "Offline-Daten werden verwendet",
 			"description": "API nicht verfügbar, zeige häufige Städte"
-		}
+		},
+		"clearSelectedCity": "Ausgewählte Stadt löschen"
 	},
 	"availability": {
 		"title": "Verfügbarkeits-Zusammenfassung",
@@ -62,10 +64,22 @@
 		"search": "Suchen",
 		"loading": "Laden...",
 		"error": "Fehler",
-		"noData": "Keine Daten verfügbar"
+		"noData": "Keine Daten verfügbar",
+		"close": "Schließen"
 	},
 	"accessibility": {
 		"searchIcon": "Suchen",
 		"loadingSpinner": "Laden"
+	},
+	"about": {
+		"title": "Über den Arbeitsstunden-Rechner",
+		"description": "Eine moderne Webanwendung zur Berechnung und Verwaltung von Arbeitsplänen über verschiedene Zeitzonen hinweg. Dieses Tool hilft Benutzern dabei, ihre Arbeitszeiten zu definieren und die Verfügbarkeit in der Zeitzone ihres Managers zu visualisieren, wodurch die Koordination bei der Fernarbeit erleichtert wird.",
+		"features": "Hauptfunktionen",
+		"feature1": "Wöchentlichen Arbeitsplan mit flexiblen Start- und Endzeiten definieren",
+		"feature2": "Stadt/Zeitzone des Managers suchen und auswählen mit Echtzeituhren",
+		"feature3": "Verfügbarkeitszusammenfassung mit Überschneidungen der Arbeitspläne anzeigen",
+		"feature4": "Mehrsprachige Unterstützung mit automatischer Spracherkennung",
+		"feature5": "Hell- und Dunkelmodus mit responsivem, Mobile-First-Design",
+		"techStack": "Technologie-Stack"
 	}
 }

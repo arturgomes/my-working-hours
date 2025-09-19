@@ -4,7 +4,8 @@
 		"subtitle": "Calculate your availability across timezones"
 	},
 	"footer": {
-		"builtWith": "Built with React 19, RTK Query, and Ark UI"
+		"builtWith": "Built with React 19, RTK Query, and Ark UI",
+		"aboutApp": "About this app"
 	},
 	"theme": {
 		"switchToDark": "Switch to dark mode",
@@ -31,7 +32,8 @@
 		"offlineMode": {
 			"title": "Using offline data",
 			"description": "API unavailable, showing common cities"
-		}
+		},
+		"clearSelectedCity": "Clear selected city"
 	},
 	"availability": {
 		"title": "Availability Summary",
@@ -62,10 +64,22 @@
 		"search": "Search",
 		"loading": "Loading...",
 		"error": "Error",
-		"noData": "No data available"
+		"noData": "No data available",
+		"close": "Close"
 	},
 	"accessibility": {
 		"searchIcon": "Search",
 		"loadingSpinner": "Loading"
+	},
+	"about": {
+		"title": "About Work Hours Calculator",
+		"description": "A modern web application for calculating and managing work schedules across different time zones. This tool helps users define their working hours and visualize availability in their manager's time zone, making remote work coordination easier.",
+		"features": "Key Features",
+		"feature1": "Define weekly work schedule with flexible start and end times",
+		"feature2": "Search and select manager's city/timezone with real-time clocks",
+		"feature3": "View availability summary showing overlap between work schedules",
+		"feature4": "Multi-language support with automatic language detection",
+		"feature5": "Light and dark theme with responsive, mobile-first design",
+		"techStack": "Technology Stack"
 	}
 }

@@ -4,7 +4,8 @@
 		"subtitle": "Calcola la tua disponibilità attraverso i fusi orari"
 	},
 	"footer": {
-		"builtWith": "Realizzato con React 19, RTK Query e Ark UI"
+		"builtWith": "Realizzato con React 19, RTK Query e Ark UI",
+		"aboutApp": "Informazioni su questa app"
 	},
 	"theme": {
 		"switchToDark": "Passa alla modalità scura",
@@ -31,7 +32,8 @@
 		"offlineMode": {
 			"title": "Utilizzando dati offline",
 			"description": "API non disponibile, mostrando città comuni"
-		}
+		},
+		"clearSelectedCity": "Rimuovi la città selezionata"
 	},
 	"availability": {
 		"title": "Riepilogo Disponibilità",
@@ -62,10 +64,22 @@
 		"search": "Cerca",
 		"loading": "Caricamento...",
 		"error": "Errore",
-		"noData": "Nessun dato disponibile"
+		"noData": "Nessun dato disponibile",
+		"close": "Chiudi"
 	},
 	"accessibility": {
 		"searchIcon": "Cerca",
 		"loadingSpinner": "Caricamento"
+	},
+	"about": {
+		"title": "Informazioni sul Calcolatore delle Ore di Lavoro",
+		"description": "Un'applicazione web moderna per calcolare e gestire gli orari di lavoro attraverso diversi fusi orari. Questo strumento aiuta gli utenti a definire i loro orari di lavoro e visualizzare la disponibilità nel fuso orario del loro manager, rendendo più facile il coordinamento del lavoro remoto.",
+		"features": "Caratteristiche Principali",
+		"feature1": "Definire l'orario di lavoro settimanale con orari di inizio e fine flessibili",
+		"feature2": "Cercare e selezionare la città/fuso orario del manager con orologi in tempo reale",
+		"feature3": "Visualizzare un riepilogo della disponibilità mostrando la sovrapposizione tra gli orari di lavoro",
+		"feature4": "Supporto multi-lingua con rilevamento automatico della lingua",
+		"feature5": "Modalità chiara e scura con design responsive, mobile-first",
+		"techStack": "Stack Tecnologico"
 	}
 }

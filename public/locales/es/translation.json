@@ -4,7 +4,8 @@
 		"subtitle": "Calcula tu disponibilidad entre zonas horarias"
 	},
 	"footer": {
-		"builtWith": "Desarrollado con React 19, RTK Query y Ark UI"
+		"builtWith": "Desarrollado con React 19, RTK Query y Ark UI",
+		"aboutApp": "Acerca de esta aplicación"
 	},
 	"theme": {
 		"switchToDark": "Cambiar a modo oscuro",
@@ -31,7 +32,8 @@
 		"offlineMode": {
 			"title": "Usando datos sin conexión",
 			"description": "API no disponible, mostrando ciudades comunes"
-		}
+		},
+		"clearSelectedCity": "Limpiar ciudad seleccionada"
 	},
 	"availability": {
 		"title": "Resumen de Disponibilidad",
@@ -62,10 +64,22 @@
 		"search": "Buscar",
 		"loading": "Cargando...",
 		"error": "Error",
-		"noData": "No hay datos disponibles"
+		"noData": "No hay datos disponibles",
+		"close": "Cerrar"
 	},
 	"accessibility": {
 		"searchIcon": "Buscar",
 		"loadingSpinner": "Cargando"
+	},
+	"about": {
+		"title": "Acerca de la Calculadora de Horarios de Trabajo",
+		"description": "Una aplicación web moderna para calcular y gestionar horarios de trabajo en diferentes zonas horarias. Esta herramienta ayuda a los usuarios a definir sus horas de trabajo y visualizar la disponibilidad en la zona horaria de su gerente, facilitando la coordinación del trabajo remoto.",
+		"features": "Características Principales",
+		"feature1": "Definir horario de trabajo semanal con horas de inicio y fin flexibles",
+		"feature2": "Buscar y seleccionar la ciudad/zona horaria del gerente con relojes en tiempo real",
+		"feature3": "Ver resumen de disponibilidad mostrando superposición entre horarios de trabajo",
+		"feature4": "Soporte multi-idioma con detección automática de idioma",
+		"feature5": "Modo claro y oscuro con diseño responsivo y enfoque mobile-first",
+		"techStack": "Stack Tecnológico"
 	}
 }

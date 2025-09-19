@@ -4,7 +4,8 @@
 		"subtitle": "Calcule sua disponibilidade entre fusos horários"
 	},
 	"footer": {
-		"builtWith": "Desenvolvido com React 19, RTK Query e Ark UI"
+		"builtWith": "Desenvolvido com React 19, RTK Query e Ark UI",
+		"aboutApp": "Sobre este aplicativo"
 	},
 	"theme": {
 		"switchToDark": "Alternar para modo escuro",
@@ -31,7 +32,8 @@
 		"offlineMode": {
 			"title": "Usando dados offline",
 			"description": "API indisponível, mostrando cidades comuns"
-		}
+		},
+		"clearSelectedCity": "Limpar cidade selecionada"
 	},
 	"availability": {
 		"title": "Resumo de Disponibilidade",
@@ -62,10 +64,22 @@
 		"search": "Buscar",
 		"loading": "Carregando...",
 		"error": "Erro",
-		"noData": "Nenhum dado disponível"
+		"noData": "Nenhum dado disponível",
+		"close": "Fechar"
 	},
 	"accessibility": {
 		"searchIcon": "Buscar",
 		"loadingSpinner": "Carregando"
+	},
+	"about": {
+		"title": "Sobre a Calculadora de Horário de Trabalho",
+		"description": "Uma aplicação web moderna para calcular e gerenciar horários de trabalho entre diferentes fusos horários. Esta ferramenta ajuda os usuários a definir seus horários de trabalho e visualizar a disponibilidade no fuso horário do seu gestor, facilitando a coordenação do trabalho remoto.",
+		"features": "Principais Funcionalidades",
+		"feature1": "Definir horário de trabalho semanal com horários de início e fim flexíveis",
+		"feature2": "Buscar e selecionar a cidade/fuso horário do gestor com relógios em tempo real",
+		"feature3": "Visualizar resumo de disponibilidade mostrando sobreposição entre horários de trabalho",
+		"feature4": "Suporte multi-idioma com detecção automática de idioma",
+		"feature5": "Modo claro e escuro com design responsivo, mobile-first",
+		"techStack": "Stack Tecnológico"
 	}
 }
