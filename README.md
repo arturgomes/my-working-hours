@@ -2,6 +2,8 @@
 
 A modern web application for calculating and managing work schedules across different time zones. This tool helps users define their working hours and visualize availability in their manager's time zone, making remote work coordination easier.
 
+Available online [here](https://my-working-hours.vercel.app/)
+
 ## Purpose
 
 This application allows users to:
@@ -53,7 +55,7 @@ This application allows users to:
 ### Installation
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/arturgomes/my-working-hours.git
 cd my-working-hours
 
 # Install dependencies
