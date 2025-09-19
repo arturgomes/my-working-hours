@@ -141,7 +141,7 @@ export const CitySearchSimple = ({
 
 							{searchQuery.trim().length === 0 && (
 								<div className="px-4 py-3 text-sm text-gray-500 dark:text-gray-400">
-									Start typing to search cities...
+									{t("citySearch.startTyping")}
 								</div>
 							)}
 
