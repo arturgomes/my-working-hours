@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store";
 import type { AvailabilitySummaryProps } from "../types";
@@ -18,14 +19,19 @@ export const AvailabilitySummary = ({
 	const { userSchedule, userTimezone, managerTimezone } = useSelector(
 		(state: RootState) => state.workSchedule,
 	);
+	const { t } = useTranslation();
 
 	const availability = useMemo(() => {
 		return calculateAvailability(
 			userSchedule,
 			userTimezone,
 			managerTimezone || undefined,
+			{
+				available: t("availability.available"),
+				unavailable: t("availability.unavailable"),
+			},
 		);
-	}, [userSchedule, userTimezone, managerTimezone]);
+	}, [userSchedule, userTimezone, managerTimezone, t]);
 
 	const convertedSchedule = useMemo(() => {
 		if (!managerTimezone) return null;
@@ -51,10 +57,10 @@ export const AvailabilitySummary = ({
 		return (
 			<SubCard theme="yellow" padding="lg" bordered className={className}>
 				<h3 className="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
-					Availability Summary
+					{t("availability.title")}
 				</h3>
 				<p className="text-yellow-700 dark:text-yellow-300">
-					Please select your manager's location to see availability comparison.
+					{t("availability.selectLocationPrompt")}
 				</p>
 			</SubCard>
 		);
@@ -63,7 +69,7 @@ export const AvailabilitySummary = ({
 	return (
 		<Card
 			className={className}
-			label="Availability Summary"
+			label={t("availability.title")}
 			rightContent={
 				<div
 					className={`p-2 rounded-md ${
@@ -93,7 +99,7 @@ export const AvailabilitySummary = ({
 
 					{!availability.isAvailable && availability.nextAvailable && (
 						<p className="text-xs text-red-700 dark:text-red-300 mt-1">
-							Next available: {availability.nextAvailable}
+							{t("availability.nextAvailable", { time: availability.nextAvailable })}
 						</p>
 					)}
 				</div>
@@ -104,29 +110,32 @@ export const AvailabilitySummary = ({
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 					<SubCard theme="blue">
 						<h4 className="font-medium text-blue-800 dark:text-blue-200 mb-2">
-							Your Time
+							{t("availability.yourTime")}
 						</h4>
 						<p className="text-lg font-mono font-bold text-blue-900 dark:text-blue-100">
 							{availability.currentLocalTime}
 						</p>
 						<p className="text-sm text-blue-700 dark:text-blue-300 mt-1">
-							Work hours: {formatScheduleTime(userSchedule.startTime)} -{" "}
-							{formatScheduleTime(userSchedule.endTime)}
+							{t("availability.workHours", {
+								startTime: formatScheduleTime(userSchedule.startTime),
+								endTime: formatScheduleTime(userSchedule.endTime),
+							})}
 						</p>
 					</SubCard>
 
 					<SubCard theme="purple">
 						<h4 className="font-medium text-purple-800 dark:text-purple-200 mb-2">
-							Manager's Time
+							{t("availability.managerTime")}
 						</h4>
 						<p className="text-lg font-mono font-bold text-purple-900 dark:text-purple-100">
 							{availability.currentManagerTime}
 						</p>
 						{convertedSchedule && (
 							<p className="text-sm text-purple-700 dark:text-purple-300 mt-1">
-								Your hours there:{" "}
-								{formatScheduleTime(convertedSchedule.startTime)} -{" "}
-								{formatScheduleTime(convertedSchedule.endTime)}
+								{t("availability.yourHoursThere", {
+									startTime: formatScheduleTime(convertedSchedule.startTime),
+									endTime: formatScheduleTime(convertedSchedule.endTime),
+								})}
 							</p>
 						)}
 					</SubCard>
@@ -135,16 +144,16 @@ export const AvailabilitySummary = ({
 				{/* Communication Helper */}
 				<SubCard theme="gray">
 					<h4 className="font-medium text-gray-800 dark:text-white mb-2">
-						💬 Quick Communication
+						💬 {t("availability.quickCommunication.title")}
 					</h4>
 					<p className="text-sm text-gray-700 dark:text-gray-300">
-						"I'm available from{" "}
+						{t("availability.quickCommunication.messagePrefix")}:{" "}
 						<span className="font-mono font-medium">
 							{convertedSchedule
 								? `${formatScheduleTime(convertedSchedule.startTime)} - ${formatScheduleTime(convertedSchedule.endTime)}`
 								: `${formatScheduleTime(userSchedule.startTime)} - ${formatScheduleTime(userSchedule.endTime)}`}
 						</span>{" "}
-						your time."
+						{t("availability.quickCommunication.messageSuffix")}
 					</p>
 				</SubCard>
 			</div>
