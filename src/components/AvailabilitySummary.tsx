@@ -1,13 +1,11 @@
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
-import { useCurrentTime } from '../hooks/useCurrentTime';
 import { calculateAvailability, convertScheduleToTimezone } from '../utils/timeUtils';
 import type { RootState } from '../store';
 import type { AvailabilitySummaryProps } from '../types';
 
 export const AvailabilitySummary = ({ className = '' }: Omit<AvailabilitySummaryProps, 'userSchedule' | 'userTimezone' | 'managerTimezone'>) => {
   const { userSchedule, userTimezone, managerTimezone } = useSelector((state: RootState) => state.workSchedule);
-  const { currentTime } = useCurrentTime();
 
   const availability = useMemo(() => {
     return calculateAvailability(userSchedule, userTimezone, managerTimezone || undefined);
