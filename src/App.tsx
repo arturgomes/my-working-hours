@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { AvailabilitySummary, TimeDisplay, WorkHoursForm } from "./components";
 import { CitySearchSimple } from "./components/CitySearchSimple";
+import { ThemeToggle } from "./components/ThemeToggle";
 import type { RootState } from "./store";
 
 function App() {
@@ -9,47 +10,49 @@ function App() {
 	);
 
 	return (
-		<div className="min-h-screen bg-gray-50">
+		<div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
 			{/* Header */}
-			<header className="bg-white shadow-sm border-b">
-				<div className="max-w-4xl mx-auto px-6 py-4">
-					<h1 className="text-3xl font-bold text-gray-900">
-						Work Hours Calculator
-					</h1>
-					<p className="text-gray-600 mt-1">
-						Calculate your availability across timezones
-					</p>
+			<header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
+				<div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+					<div>
+						<h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+							Work Hours Calculator
+						</h1>
+						<p className="text-gray-600 dark:text-gray-300 mt-1">
+							Calculate your availability across timezones
+						</p>
+					</div>
+					<ThemeToggle />
 				</div>
 			</header>
 
 			{/* Main Content */}
 			<main className="max-w-4xl mx-auto px-6 py-8">
 				<div className="space-y-6">
-					<div className="flex flex-row gap-4">
-						<div className="flex flex-col gap-4 w-full">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+						<div className="flex flex-col gap-6">
 							{/* Work Hours Form */}
-							<WorkHoursForm className="w-full" />
+							<WorkHoursForm className="h-auto" />
 							{/* City Search */}
-
 							<CitySearchSimple
 								placeholder="Search for your manager's city..."
-								className="w-full"
+								className="h-auto"
 							/>
 						</div>
 
 						{/* Availability Summary */}
-						<AvailabilitySummary className="w-full" />
+						<AvailabilitySummary className="h-full" />
 					</div>
 
-					<div className="flex flex-row gap-4 w-full justify-between">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 						{/* Local Time Display */}
-						<TimeDisplay label="Your Local Time" className="w-full" />
+						<TimeDisplay label="Your Local Time" className="h-auto" />
 						{/* Manager's Time Display - Only show if city is selected */}
 						{selectedCity && managerTimezone && (
 							<TimeDisplay
 								timezone={managerTimezone}
 								label={`${selectedCity.city} Time`}
-								className="w-full"
+								className="h-auto"
 							/>
 						)}
 					</div>
@@ -57,9 +60,9 @@ function App() {
 			</main>
 
 			{/* Footer */}
-			<footer className="bg-white border-t mt-12">
+			<footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12">
 				<div className="max-w-4xl mx-auto px-6 py-4">
-					<p className="text-center text-sm text-gray-500">
+					<p className="text-center text-sm text-gray-500 dark:text-gray-400">
 						Built with React 19, RTK Query, and Ark UI
 					</p>
 				</div>

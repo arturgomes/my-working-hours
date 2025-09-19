@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
+  --card-bg: #ffffff;
+}
+
+.dark {
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --border: #374151;
+  --card-bg: #1f2937;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
