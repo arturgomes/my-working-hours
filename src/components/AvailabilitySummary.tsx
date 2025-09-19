@@ -99,14 +99,15 @@ export const AvailabilitySummary = ({
 
 					{!availability.isAvailable && availability.nextAvailable && (
 						<p className="text-xs text-red-700 dark:text-red-300 mt-1">
-							{t("availability.nextAvailable", { time: availability.nextAvailable })}
+							{t("availability.nextAvailable", {
+								time: availability.nextAvailable,
+							})}
 						</p>
 					)}
 				</div>
 			}
 		>
 			<div className="space-y-4">
-				{/* Time Comparison */}
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 					<SubCard theme="blue">
 						<h4 className="font-medium text-blue-800 dark:text-blue-200 mb-2">
@@ -141,7 +142,6 @@ export const AvailabilitySummary = ({
 					</SubCard>
 				</div>
 
-				{/* Communication Helper */}
 				<SubCard theme="gray">
 					<h4 className="font-medium text-gray-800 dark:text-white mb-2">
 						💬 {t("availability.quickCommunication.title")}
@@ -160,5 +160,3 @@ export const AvailabilitySummary = ({
 		</Card>
 	);
 };
-
-AvailabilitySummary.displayName = "AvailabilitySummary";

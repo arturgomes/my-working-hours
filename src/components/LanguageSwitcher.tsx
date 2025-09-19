@@ -4,7 +4,6 @@ export const LanguageSwitcher = () => {
 	const { i18n } = useTranslation();
 
 	const changeLanguage = async (language: string) => {
-		console.log("changeLanguage", language);
 		await i18n.changeLanguage(language);
 		localStorage.setItem("i18nextLng", language);
 	};
@@ -26,5 +25,3 @@ export const LanguageSwitcher = () => {
 		</div>
 	);
 };
-
-LanguageSwitcher.displayName = "LanguageSwitcher";

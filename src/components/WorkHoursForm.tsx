@@ -41,7 +41,6 @@ export const WorkHoursForm = ({
 		[dispatch],
 	);
 
-	// Auto-save when form is valid and values change
 	useEffect(() => {
 		if (
 			isValid &&
@@ -50,7 +49,7 @@ export const WorkHoursForm = ({
 		) {
 			const timer = setTimeout(() => {
 				handleSubmit(onSubmit)();
-			}, 500); // Debounce auto-save
+			}, 500);
 
 			return () => clearTimeout(timer);
 		}
