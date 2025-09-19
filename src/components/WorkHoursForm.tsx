@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCallback, useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	type WorkScheduleFormData,
@@ -13,6 +14,7 @@ import type { WorkHoursInputProps } from "../types";
 export const WorkHoursForm = ({
 	className = "",
 }: Omit<WorkHoursInputProps, "schedule" | "onScheduleChange">) => {
+	const { t } = useTranslation();
 	const dispatch = useDispatch();
 	const schedule = useSelector(
 		(state: RootState) => state.workSchedule.userSchedule,
@@ -59,7 +61,7 @@ export const WorkHoursForm = ({
 			className={`p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border ${className}`}
 		>
 			<h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
-				Your Work Schedule
+				{t("workSchedule.title")}
 			</h3>
 
 			<form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -69,7 +71,7 @@ export const WorkHoursForm = ({
 							htmlFor="startTime"
 							className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
 						>
-							Start Time
+							{t("workSchedule.startTimeLabel")}
 						</label>
 						<Controller
 							name="startTime"
@@ -99,7 +101,7 @@ export const WorkHoursForm = ({
 							htmlFor="endTime"
 							className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
 						>
-							End Time
+							{t("workSchedule.endTimeLabel")}
 						</label>
 						<Controller
 							name="endTime"
@@ -126,8 +128,8 @@ export const WorkHoursForm = ({
 				</div>
 
 				<div className="text-xs text-gray-500 dark:text-gray-400">
-					<p>• Changes are automatically saved</p>
-					<p>• Overnight schedules are supported (e.g., 22:00 - 06:00)</p>
+					<p>• {t("workSchedule.autoSaveNote")}</p>
+					<p>• {t("workSchedule.overnightSupportNote")}</p>
 				</div>
 			</form>
 		</div>

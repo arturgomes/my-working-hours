@@ -1,5 +1,6 @@
 import { Combobox, createListCollection } from "@ark-ui/react/combobox";
 import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { COMMON_TIMEZONES, TIMEZONE_CITY_MAP } from "../data/timezones";
 import type { RootState } from "../store";
@@ -11,6 +12,7 @@ export const CitySearchSimple = ({
 	placeholder = "Search for a city...",
 	className = "",
 }: Omit<SearchInputProps, "onCitySelect">) => {
+	const { t } = useTranslation();
 	const [searchQuery, setSearchQuery] = useState("");
 	const [isOpen, setIsOpen] = useState(false);
 	const dispatch = useDispatch();
@@ -101,7 +103,7 @@ export const CitySearchSimple = ({
 					collection={collection}
 				>
 					<Combobox.Label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-						Search Manager's Location
+						{t("citySearch.label")}
 					</Combobox.Label>
 
 					<Combobox.Control className="relative">
@@ -133,7 +135,7 @@ export const CitySearchSimple = ({
 						<Combobox.Content className="mt-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg max-h-60 overflow-auto z-10">
 							{suggestions.length === 0 && searchQuery.trim().length >= 1 && (
 								<div className="px-4 py-3 text-sm text-gray-500 dark:text-gray-400">
-									No cities found for "{searchQuery}"
+									{t("citySearch.noResultsFound", { query: searchQuery })}
 								</div>
 							)}
 
@@ -169,7 +171,10 @@ export const CitySearchSimple = ({
 				{selectedCity && (
 					<div className="mt-2 p-2 bg-blue-50 dark:bg-blue-900 rounded-lg">
 						<p className="text-sm text-blue-800 dark:text-blue-200">
-							<span className="font-medium">Selected:</span> {selectedCity.city}
+							<span className="font-medium">
+								{t("citySearch.selectedLabel")}
+							</span>{" "}
+							{selectedCity.city}
 						</p>
 						<p className="text-xs text-blue-600 dark:text-blue-400 font-mono">
 							{selectedCity.timezone}
@@ -178,11 +183,12 @@ export const CitySearchSimple = ({
 				)}
 
 				<div className="mt-1 text-xs text-gray-500">
-					💡 Showing {allCities.length} major cities worldwide
+					💡 {t("citySearch.showingCitiesCount", { count: allCities.length })}
 				</div>
 			</div>
 		</Card>
 	);
 };
 
+CitySearchSimple.displayName = "CitySearchSimple";
 CitySearchSimple.displayName = "CitySearchSimple";
