@@ -25,5 +25,3 @@ export const TimeDisplay = ({
 		</Card>
 	);
 };
-
-TimeDisplay.displayName = "TimeDisplay";
