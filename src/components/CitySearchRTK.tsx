@@ -13,6 +13,7 @@ export const CitySearchRTK = ({ placeholder = 'Search for a city...', className 
   const selectedCity = useSelector((state: RootState) => state.workSchedule.selectedCity);
 
   const [searchCities, { data: suggestions = [], isLoading, error }] = useLazySearchCitiesQuery();
+  const [usingFallback, setUsingFallback] = useState(false);
 
   // Debounced search effect
   useEffect(() => {
@@ -99,8 +100,9 @@ export const CitySearchRTK = ({ placeholder = 'Search for a city...', className 
             )}
 
             {error && (
-              <div className="px-4 py-3 text-sm text-red-500">
-                Error searching cities. Please try again.
+              <div className="px-4 py-3 text-sm text-orange-600 bg-orange-50 border border-orange-200 rounded">
+                <p className="font-medium">Using offline data</p>
+                <p className="text-xs">API unavailable, showing common cities</p>
               </div>
             )}
 
