@@ -40,11 +40,11 @@
 		"selectLocationPrompt": "Por favor, selecione a localização do seu gestor para ver a comparação de disponibilidade.",
 		"available": "Disponível",
 		"unavailable": "Indisponível",
-		"nextAvailable": "Próxima disponibilidade: {time}",
+		"nextAvailable": "Próxima disponibilidade: {{time}}",
 		"yourTime": "Seu Horário",
 		"managerTime": "Horário do Gestor",
-		"workHours": "Horário de trabalho: {startTime} - {endTime}",
-		"yourHoursThere": "Seu horário lá: {startTime} - {endTime}",
+		"workHours": "Horário de trabalho: {{startTime}} - {{endTime}}",
+		"yourHoursThere": "Seu horário lá: {{startTime}} - {{endTime}}",
 		"quickCommunication": {
 			"title": "Comunicação Rápida",
 			"messagePrefix": "Estou disponível das",
@@ -53,7 +53,7 @@
 	},
 	"timeDisplay": {
 		"yourLocalTime": "Seu Horário Local",
-		"cityTime": "Horário de {city}"
+		"cityTime": "Horário de {{city}}"
 	},
 	"validation": {
 		"invalidTimeFormat": "Por favor, insira um horário válido no formato HH:MM",
