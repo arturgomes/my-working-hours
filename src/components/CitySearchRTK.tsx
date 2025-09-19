@@ -13,7 +13,6 @@ export const CitySearchRTK = ({ placeholder = 'Search for a city...', className 
   const selectedCity = useSelector((state: RootState) => state.workSchedule.selectedCity);
 
   const [searchCities, { data: suggestions = [], isLoading, error }] = useLazySearchCitiesQuery();
-  const [usingFallback, setUsingFallback] = useState(false);
 
   // Debounced search effect
   useEffect(() => {
@@ -84,6 +83,7 @@ export const CitySearchRTK = ({ placeholder = 'Search for a city...', className 
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
+                <title>Search</title>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             )}
