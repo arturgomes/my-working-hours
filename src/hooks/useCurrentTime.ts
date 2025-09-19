@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const useCurrentTime = (timezone?: string) => {
+  const { i18n } = useTranslation();
   const [currentTime, setCurrentTime] = useState<Date>(new Date());
 
   useEffect(() => {
@@ -27,7 +29,7 @@ export const useCurrentTime = (timezone?: string) => {
       ...options
     };
 
-    return currentTime.toLocaleString('en-US', {
+    return currentTime.toLocaleString(i18n.language, {
       ...defaultOptions,
       timeZone: timezone,
     });
@@ -42,7 +44,7 @@ export const useCurrentTime = (timezone?: string) => {
       ...options
     };
 
-    return currentTime.toLocaleDateString('en-US', {
+    return currentTime.toLocaleDateString(i18n.language, {
       ...defaultOptions,
       timeZone: timezone,
     });
