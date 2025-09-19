@@ -1,35 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useSelector } from 'react-redux';
+import { TimeDisplay, CitySearchRTK, WorkHoursForm, AvailabilitySummary } from './components';
+import type { RootState } from './store';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { managerTimezone, selectedCity } = useSelector((state: RootState) => state.workSchedule);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b">
+        <div className="max-w-4xl mx-auto px-6 py-4">
+          <h1 className="text-3xl font-bold text-gray-900">
+            Work Hours Calculator
+          </h1>
+          <p className="text-gray-600 mt-1">
+            Calculate your availability across timezones
+          </p>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-4xl mx-auto px-6 py-8">
+        <div className="space-y-6">
+          {/* Local Time Display */}
+          <TimeDisplay
+            label="Your Local Time"
+            className="w-full"
+          />
+
+          {/* City Search */}
+          <CitySearchRTK
+            placeholder="Search for your manager's city..."
+            className="w-full"
+          />
+
+          {/* Manager's Time Display - Only show if city is selected */}
+          {selectedCity && managerTimezone && (
+            <TimeDisplay
+              timezone={managerTimezone}
+              label={`${selectedCity.city} Time`}
+              className="w-full"
+            />
+          )}
+
+          {/* Work Hours Form */}
+          <WorkHoursForm className="w-full" />
+
+          {/* Availability Summary */}
+          <AvailabilitySummary className="w-full" />
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-white border-t mt-12">
+        <div className="max-w-4xl mx-auto px-6 py-4">
+          <p className="text-center text-sm text-gray-500">
+            Built with React 19, RTK Query, and Ark UI
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
