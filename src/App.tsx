@@ -1,10 +1,13 @@
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import { AvailabilitySummary, TimeDisplay, WorkHoursForm } from "./components";
 import { CitySearchSimple } from "./components/CitySearchSimple";
 import { ThemeToggle } from "./components/ThemeToggle";
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import type { RootState } from "./store";
 
 function App() {
+	const { t } = useTranslation();
 	const { managerTimezone, selectedCity } = useSelector(
 		(state: RootState) => state.workSchedule,
 	);
@@ -16,13 +19,16 @@ function App() {
 				<div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
 					<div>
 						<h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-							Work Hours Calculator
+							{t('header.title')}
 						</h1>
 						<p className="text-gray-600 dark:text-gray-300 mt-1">
-							Calculate your availability across timezones
+							{t('header.subtitle')}
 						</p>
 					</div>
-					<ThemeToggle />
+					<div className="flex items-center space-x-4">
+						<LanguageSwitcher />
+						<ThemeToggle />
+					</div>
 				</div>
 			</header>
 
