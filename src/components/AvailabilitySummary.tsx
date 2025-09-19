@@ -6,6 +6,8 @@ import {
 	calculateAvailability,
 	convertScheduleToTimezone,
 } from "../utils/timeUtils";
+import { Card } from "./ui/Card";
+import { SubCard } from "./ui/SubCard";
 
 export const AvailabilitySummary = ({
 	className = "",
@@ -47,42 +49,42 @@ export const AvailabilitySummary = ({
 
 	if (!managerTimezone) {
 		return (
-			<div
-				className={`p-6 bg-yellow-50 rounded-lg border border-yellow-200 ${className}`}
-			>
-				<h3 className="text-lg font-semibold text-yellow-800 mb-2">
+			<SubCard theme="yellow" padding="lg" bordered className={className}>
+				<h3 className="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
 					Availability Summary
 				</h3>
-				<p className="text-yellow-700">
+				<p className="text-yellow-700 dark:text-yellow-300">
 					Please select your manager's location to see availability comparison.
 				</p>
-			</div>
+			</SubCard>
 		);
 	}
 
 	return (
-		<div className={`p-6 bg-white rounded-lg shadow-sm border ${className}`}>
-			<div className="mb-6 flex flex-row gap-4 items-center">
-				<h3 className="text-lg font-semibold text-gray-800 mb-4 flex-1">
-					Availability Summary
-				</h3>
-				{/* Current Status */}
+		<Card
+			className={className}
+			label="Availability Summary"
+			rightContent={
 				<div
 					className={`p-2 rounded-md ${
 						availability.isAvailable
-							? "bg-green-50 border border-green-200"
-							: "bg-red-50 border border-red-200"
+							? "bg-green-50 border border-green-200 dark:bg-green-900/20 dark:border-green-800"
+							: "bg-red-50 border border-red-200 dark:bg-red-900/20 dark:border-red-800"
 					}`}
 				>
 					<div className="flex items-center space-x-2">
 						<div
 							className={`w-3 h-3 rounded-full ${
-								availability.isAvailable ? "bg-green-500" : "bg-red-500"
+								availability.isAvailable
+									? "bg-green-500 dark:bg-green-400"
+									: "bg-red-500 dark:bg-red-400"
 							}`}
 						/>
 						<span
-							className={`font-medium ${
-								availability.isAvailable ? "text-green-800" : "text-red-800"
+							className={`font-medium text-sm ${
+								availability.isAvailable
+									? "text-green-800 dark:text-green-200"
+									: "text-red-800 dark:text-red-200"
 							}`}
 						>
 							{availability.message}
@@ -90,47 +92,52 @@ export const AvailabilitySummary = ({
 					</div>
 
 					{!availability.isAvailable && availability.nextAvailable && (
-						<p className="text-sm text-red-700">
+						<p className="text-xs text-red-700 dark:text-red-300 mt-1">
 							Next available: {availability.nextAvailable}
 						</p>
 					)}
 				</div>
-			</div>
+			}
+		>
 			<div className="space-y-4">
 				{/* Time Comparison */}
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-					<div className="p-4 bg-blue-50 rounded-lg">
-						<h4 className="font-medium text-blue-800 mb-2">Your Time</h4>
-						<p className="text-lg font-mono font-bold text-blue-900">
+					<SubCard theme="blue">
+						<h4 className="font-medium text-blue-800 dark:text-blue-200 mb-2">
+							Your Time
+						</h4>
+						<p className="text-lg font-mono font-bold text-blue-900 dark:text-blue-100">
 							{availability.currentLocalTime}
 						</p>
-						<p className="text-sm text-blue-700 mt-1">
+						<p className="text-sm text-blue-700 dark:text-blue-300 mt-1">
 							Work hours: {formatScheduleTime(userSchedule.startTime)} -{" "}
 							{formatScheduleTime(userSchedule.endTime)}
 						</p>
-					</div>
+					</SubCard>
 
-					<div className="p-4 bg-purple-50 rounded-lg">
-						<h4 className="font-medium text-purple-800 mb-2">Manager's Time</h4>
-						<p className="text-lg font-mono font-bold text-purple-900">
+					<SubCard theme="purple">
+						<h4 className="font-medium text-purple-800 dark:text-purple-200 mb-2">
+							Manager's Time
+						</h4>
+						<p className="text-lg font-mono font-bold text-purple-900 dark:text-purple-100">
 							{availability.currentManagerTime}
 						</p>
 						{convertedSchedule && (
-							<p className="text-sm text-purple-700 mt-1">
+							<p className="text-sm text-purple-700 dark:text-purple-300 mt-1">
 								Your hours there:{" "}
 								{formatScheduleTime(convertedSchedule.startTime)} -{" "}
 								{formatScheduleTime(convertedSchedule.endTime)}
 							</p>
 						)}
-					</div>
+					</SubCard>
 				</div>
 
 				{/* Communication Helper */}
-				<div className="p-4 bg-gray-50 rounded-lg">
-					<h4 className="font-medium text-gray-800 mb-2">
+				<SubCard theme="gray">
+					<h4 className="font-medium text-gray-800 dark:text-white mb-2">
 						💬 Quick Communication
 					</h4>
-					<p className="text-sm text-gray-700">
+					<p className="text-sm text-gray-700 dark:text-gray-300">
 						"I'm available from{" "}
 						<span className="font-mono font-medium">
 							{convertedSchedule
@@ -139,9 +146,9 @@ export const AvailabilitySummary = ({
 						</span>{" "}
 						your time."
 					</p>
-				</div>
+				</SubCard>
 			</div>
-		</div>
+		</Card>
 	);
 };
 
