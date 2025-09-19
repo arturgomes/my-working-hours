@@ -74,6 +74,7 @@ export const calculateAvailability = (
 	userSchedule: WorkSchedule,
 	userTimezone: string,
 	managerTimezone?: string,
+	translations?: { available: string; unavailable: string },
 ): AvailabilityStatus => {
 	const now = new Date();
 	const isAvailable = isTimeWithinSchedule(now, userSchedule, userTimezone);
@@ -94,13 +95,17 @@ export const calculateAvailability = (
 			})
 		: userTimeString;
 
+	// Use provided translations or fallback to English defaults
+	const defaultTranslations = { available: "Available", unavailable: "Unavailable" };
+	const t = translations || defaultTranslations;
+
 	let message: string;
 	let nextAvailable: string | undefined;
 
 	if (isAvailable) {
-		message = "Available";
+		message = t.available;
 	} else {
-		message = "Unavailable";
+		message = t.unavailable;
 		const nextAvailableDate = getNextAvailableTime(
 			now,
 			userSchedule,
